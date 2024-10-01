@@ -7,7 +7,7 @@ router.post('/register', (req, res) => {
     const { name, surName, phoneNumber, mail, hospital, department, password } = req.body; // Gelen verileri al
 
     // Kullanıcıyı veritabanına ekleme sorgusu
-    const sql = 'INSERT INTO users (name, surName, phoneNumber, mail, hospital, department, password) VALUES (?, ?, ?, ?, ?, ?, ?)';
+    const sql = 'INSERT INTO register (name, surName, phoneNumber, mail, hospital, department, password) VALUES (?, ?, ?, ?, ?, ?, ?)';
 
     connection.query(sql, [name, surName, phoneNumber, mail, hospital, department, password], (err, results) => {
         if (err) {

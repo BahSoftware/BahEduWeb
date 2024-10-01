@@ -52,7 +52,7 @@ export default function Register() {
               placeholder="Şifre"
               className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600"
             />
-            
+
             <div className="flex w-full space-x-4">
               <button
                 type="submit"
@@ -60,10 +60,10 @@ export default function Register() {
               >
                 Kayıt Ol
               </button>
-              
+
             </div>
             <div className="w-full text-center">
-            <Link className="text-gray-900 opacity-70 hover:opacity-100" href={"/Login"}>Üye misin? Giriş yap!</Link>
+              <Link className="text-gray-900 opacity-70 hover:opacity-100" href={"/Login"}>Üye misin? Giriş yap!</Link>
             </div>
           </form>
         </div>
