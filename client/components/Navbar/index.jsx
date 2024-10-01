@@ -4,12 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar() {
-  const [selected, setSelected] = useState("Ana Sayfa");
   const [dropdownOpen, setDropdownOpen] = useState(false); // Dropdown state
-
-  const handleClick = (item) => {
-    setSelected(item); // Set clicked item as selected
-  };
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen); // Toggle dropdown
@@ -42,12 +37,7 @@ export default function Navbar() {
                 <li key={item}>
                   <Link
                     href={getHref(item)}
-                    onClick={() => handleClick(item)}
-                    className={`block py-2 px-3 text-gray-900 rounded ${
-                      selected === item
-                        ? "text-red-700 opacity-100"
-                        : "opacity-70 hover:opacity-100"
-                    }`}
+                    className={"block py-2 px-3 text-gray-900 rounded "}
                   >
                     {item}
                   </Link>
@@ -99,7 +89,7 @@ export default function Navbar() {
                 <div className="absolute top-full left-0 z-10 mt-2 w-44 divide-y divide-gray-100 overflow-hidden rounded-lg bg-white shadow">
                   <ul className="p-2 text-start text-sm font-medium text-gray-900">
                     <li>
-                    <Link
+                      <Link
                         href="/Register"
                         className="flex justify-between items-center px-4 py-2 text-gray-900 opacity-70 hover:opacity-100"
                       >
