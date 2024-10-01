@@ -34,16 +34,27 @@ Projeyi kendi bilgisayarınıza klonlamak ve çalıştırmak için aşağıdaki 
 
    ```bash
    git clone https://github.com/BahSoftware/BahEduWeb.git
-   cd BahEduWeb
 
-2. Bağımlılıkları yükleyin:
-
-   ```bash
-   npm install
-
-3. Client klasörüne erişip frontend'i çalıştırın:
+2. Client'a erişin ve bağımlılıkları yükleyin:
 
    ```bash
    cd client
+   npm install
+
+3. Client'ı çalıştırın:
+
+   ```bash
    npm run dev
+
+4. Yeni bir terminal açın. Server'a erişin ve bağımlılıkları yükleyin :
+
+   ```bash
+   cd server
+   npm install
+
+5. Server'ı çalıştırın. :
+
+   ```bash
+   node app.js
+
 
