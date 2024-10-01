@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar() {
-  const [selected, setSelected] = useState("Home");
+  const [selected, setSelected] = useState("Ana Sayfa");
   const [dropdownOpen, setDropdownOpen] = useState(false); // Dropdown state
 
   const handleClick = (item) => {
@@ -16,7 +16,7 @@ export default function Navbar() {
   };
 
   const getHref = (item) => {
-    return item === "Home" ? "/" : `/${item}`;
+    return item === "Ana Sayfa" ? "/" : `/${item}`;
   };
 
   return (
@@ -100,7 +100,7 @@ export default function Navbar() {
                   <ul className="p-2 text-start text-sm font-medium text-gray-900">
                     <li>
                     <Link
-                        href="/login"
+                        href="/Register"
                         className="flex justify-between items-center px-4 py-2 text-gray-900 opacity-70 hover:opacity-100"
                       >
                         Kayıt Ol
@@ -130,7 +130,7 @@ export default function Navbar() {
                     </li>
                     <li>
                       <Link
-                        href="/login"
+                        href="/Login"
                         className="flex justify-between items-center px-4 py-2 text-gray-900 opacity-70 hover:opacity-100"
                       >
                         Giriş Yap
