@@ -78,7 +78,7 @@ export default function Features() {
                   </dt>
                   <dd className="inline">
                     Documented and easy to use, we make it easy to integrate
-                    with your existing workflow.
+                    with your existing 
                   </dd>
                 </div>
               </dl>
