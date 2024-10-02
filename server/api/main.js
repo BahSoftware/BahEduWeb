@@ -1,18 +1,17 @@
 const express = require('express');
 require('dotenv').config({ path: '../.env' });
+const cors = require("cors");
 
 const app = express();
-const port = 3000; // Sunucu portu
+const port = 3001; // Sunucu portu
 
 // Middleware: JSON verilerini işlemek için
 app.use(express.json());
+app.use(cors());
 
 // Kullanıcı kayıt rotalarını ekle
 const registerRoutes = require('../register/register'); // register.js dosyasını içe aktar
-const loginRoutes = require('../register/login'); // login.js dosyasını içe aktar
-
 app.use('/register', registerRoutes); // Kullanıcı kayıt rotalarını '/register' yoluna bağla
-app.use('/login', loginRoutes); // Giriş rotasını '/login' yoluna bağla
 
 // Kök dizine basit bir yanıt ver
 app.get('/', (req, res) => {
